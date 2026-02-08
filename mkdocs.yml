@@ -7,7 +7,7 @@ site_name: GL.iNet Router Docs 4
 site_description: Documentation for GL.iNet Router Productions
 site_author: GL.iNet
 site_url: https://docs.gl-inet.com/router/en/4/
-site_dir: /root/docs-build/router/en/4/
+site_dir: /home/leo/.openclaw/workspace/docs4.x/site
 copyright: Copyright &copy; 2026 GL Technologies & Microuter Technologies
 
 theme:
@@ -40,10 +40,14 @@ plugins:
         'tutorials/how_to_use_simpoyo_esim_physical_card_with_glinet_routers.md': 'tutorials/how_to_use_esim_physical_card_with_glinet_routers.md'
         'tutorials/how_to_use_the_simpoyo_esim_physical_card_with_android_devices.md': 'tutorials/how_to_use_the_esim_physical_card_with_android_devices.md'
   - i18n:
-      default_language: en
       languages:
-        en: English
-        ja: 日本語
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: ja
+          name: 日本語
+          build: true
       nav_translations:
         ja:
           Home: ホーム

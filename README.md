@@ -2,9 +2,9 @@
 
 This repository is the source code for documentation of GL.iNet routers firmware 4.x
 
-## Environment 
+## Environment
 
-Build by [mkdocs](https://www.mkdocs.org/) 1.5.3, with theme [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) 9.4.6
+Build by [mkdocs](https://www.mkdocs.org/) 1.5.3, with theme [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) 9.4.6 and [mkdocs-static-i18n](https://github.com/april/mkdocs-static-i18n) 1.3.0 for multilingual support (English & Japanese).
 
 ## Installation
 
@@ -14,17 +14,19 @@ Create a new python virtualenv
 
 Activate the virtualenv, then
 
-`pip install mkdocs-material` or `pip install mkdocs-material=="9.*" `
-
-Or use the requirements.txt in the root of the project
-
 `pip install -r requirements.txt`
+
+Or install individually:
+
+`pip install mkdocs-material=="9.*"` and `pip install mkdocs-static-i18n=="1.*"`
 
 Refer: [https://squidfunk.github.io/mkdocs-material/getting-started/#with-pip](https://squidfunk.github.io/mkdocs-material/getting-started/#with-pip)
 
 ## Online View
 
-Please view the docs online at [https://docs.gl-inet.com/router/en/4/](https://docs.gl-inet.com/router/en/4/)
+Please view the docs online at:
+- **English**: [https://docs.gl-inet.com/router/en/4/](https://docs.gl-inet.com/router/en/4/)
+- **Japanese**: [https://docs.gl-inet.com/router/jp/4/](https://docs.gl-inet.com/router/jp/4/)
 
 ## Guide
 
@@ -97,15 +99,18 @@ Reference:
 
 [https://codepen.io/dimsemenov/pen/ZYbPJM](https://codepen.io/dimsemenov/pen/ZYbPJM)
 
-## About versoning
+## About versioning
 
-There is a plugin named `mike` is for versoning, it need to deploy with Github Page, but I don't use Github Page, I just copy the file structure like `mike` does. Please check out [mkdocs-material-example-versioning](https://github.com/squidfunk/mkdocs-material-example-versioning), and switch to `gh-pages` branch.
+There is a plugin named `mike` for versioning, but since we don't use GitHub Pages, we manually copy the file structure similar to how `mike` works.
+
+For multilingual versioning (English & Japanese), each language is built to its own directory:
+- English: `router/en/<version>/`
+- Japanese: `router/jp/<version>/`
 
 Reference:
-
-[Setting up versioning](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
-
-[https://squidfunk.github.io/mkdocs-material-example-versioning/](https://squidfunk.github.io/mkdocs-material-example-versioning/)
+- [mkdocs-static-i18n documentation](https://github.com/april/mkdocs-static-i18n)
+- [Setting up versioning](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
+- [mkdocs-material-example-versioning](https://github.com/squidfunk/mkdocs-material-example-versioning/)
 
 ## Jenkins integration
 
@@ -115,23 +120,35 @@ Reference:
 cd /root/docs-build/
 git reset --hard HEAD
 git pull
+
 # activate virtualenv
 cd /root/docs-venv/
 . ./bin/activate
+
 # git pull latest commit
 cd docs4.x
 git checkout master
 git reset --hard HEAD
 git pull
-# build docs to /root/docs-build/router/en/4/
+
+# build docs (English + Japanese)
 mkdocs build
+
+# copy English to docs-build/router/en/4/
+cp -r site/* /root/docs-build/router/en/4/
+
+# copy Japanese to docs-build/router/jp/4/
+cp -r site/ja/* /root/docs-build/router/jp/4/
+
 # deactivate virtualenv
 deactivate
+
 echo "finish building"
+
 #
 cd /root/docs-build/
 git add .
-git commit -m "docs4 build"
+git commit -m "docs4 build: $(date '+%Y-%m-%d %H:%M:%S')"
 git push
 echo "done"
 ```
