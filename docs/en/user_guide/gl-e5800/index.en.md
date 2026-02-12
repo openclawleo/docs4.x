@@ -47,13 +47,13 @@ Connect a device (e.g., computer, laptop or smartphone) to the Mudi 7 via Wi-Fi,
 
 - **Wi-Fi**
 
-    QR code: Use a device to scan the QR code on the screen of Mudi 7. Then click "Join" on your device to connect.
+    <u>QR code</u>: Use a device to scan the QR code on the screen of Mudi 7. Then click "Join" on your device to connect.
 
-    Manual Connect: On your device, go to Settings -> WLAN, locate the Wi-Fi network name of Mudi 7 in the available networks list, and enter the password to join the network. (You can find the default network name and password printed on the label.)
+    <u>Manual Connect</u>: On your device, go to Settings -> WLAN, locate the Wi-Fi network name of Mudi 7 in the available networks list, and enter the password to join the network. (You can find the default network name and password printed on the label.)
 
 - **Ethernet**
 
-    Connect your device to the LAN port of Mudi 7 via an Ethernet cable. 
+    Connect your device to the Ethernet port (default LAN) of Mudi 7 via an Ethernet cable. 
 
 - **USB**
 
@@ -65,25 +65,37 @@ Open a web browser, enter `192.168.8.1` in the address bar, then access the logi
 
 ### 5. Connect Mudi 7 to the Internet
 
-Configure your Mudi 7 using one of the five supported internet connection methods: Cellular, Ethernet, Repeater, Tethering, and USB Ethernet. If you want to use the [Multi-WAN](../../interface_guide/multi-wan.md) feature, please set up more than one internet connection methods.
+Configure your Mudi 7 using one of the supported internet connection methods: Cellular, Ethernet, Repeater, Tethering, and USB Ethernet. If you want to use the [Multi-WAN](../../interface_guide/multi-wan.md) feature, please set up more than one internet connection.
 
 === "Cellular"
 
     ![cellular connection](https://static.gl-inet.com/docs/router/en/4/user_guide/gl-e5800/internet/e5800_cellular.jpg){class="glboxshadow"}
     
-    If you have already inserted the Nano-SIM card into your Mudi 7, it will connect automatically. 
+    Mudi 7 comes with a **built-in eSIM** and **dual Nano‑SIM** slots. You can connect to the Internet by purchasing an eSIM package (no physical SIM card required), or insert your Nano‑SIM cards to access the 5G mobile network.
     
-    Once successfully connected to the internet, you should see the name of your SIM carrier and a green dot appear in the Cellular section on the INTERNET page. The touchscreen will also display the network status.
+    - eSIM: On the touchscreen, go to **Cellular** -> **Active SIM Card**, enable eSIM, then upload your eSIM profile or purchase it in the eSIM Profile Store. 
+
+    - Nano‑SIM: Remove the back cover of Mudi 7, take out the battery, insert your Nano-SIM card into the slot, then install the battery. 
+
+    Once successfully connected to the internet, the signal bars and cellular status will appear in the top right corner of the touchscreen. You can also check the connection details on the web admin panel.
 
     Please refer to [Connect to the Internet via cellular](../../interface_guide/internet_cellular.md) for detailed instructions.
+
+    !!! note
+
+        1. The built-in eSIM and SIM 2 are mutually exclusive and cannot be activated at the same time. The eSIM is disabled by default. If you enable the eSIM, SIM 2 will not work even if a SIM card is inserted.
+        2. Since Mudi 7 comes with a built-in eSIM, a SIMPoYo eSIM physical card will be recognized as a regular SIM card without eSIM functionality on Mudi 7. 
 
 === "Ethernet"
     
     ![ethernet connection](https://static.gl-inet.com/docs/router/en/4/user_guide/gl-e5800/internet/e5800_ethernet.jpg){class="glboxshadow"}
 
-    Connect the Mudi 7's WAN port to an upstream device (e.g., a modem) via an Ethernet cable. 
-    
-    Once successfully connected to the internet, a green dot will appear in the Ethernet section on the INTERNET page, and the touchscreen will also display the network status.
+    1. Connect Mudi 7's Ethernet port to an upstream network source (e.g., ISP modem, network switch, or Ethernet jack on the wall) via an Ethernet cable. 
+    2. On the touchscreen or web admin panel, go to **Network** -> **Ethernet Ports**, set the port role to **WAN**, and click **Apply**.
+
+        ![touchscreen ethernet wan](https://static.gl-inet.com/docs/router/en/4/user_guide/gl-e5800/internet/ts-ethernet-wan.png){class="glboxshadow"}
+
+    3. Once successfully connected to the internet, an Ethernet port icon will appear in the top right corner of the touchscreen. You can also check the connection details on the web admin panel.
 
     Please refer to [Connect to the Internet via an Ethernet cable](../../interface_guide/internet_ethernet.md) for detailed instructions.
 
@@ -91,11 +103,10 @@ Configure your Mudi 7 using one of the five supported internet connection method
     
     ![repeater connection](https://static.gl-inet.com/docs/router/en/4/user_guide/gl-e5800/internet/e5800_repeater.jpg){class="glboxshadow"}
 
-    1. On the INTERNET page of the web Admin Panel, locate the Repeater section, then click **Connect**.
-    2. Select a Wi-Fi network. 
-    3. Enter the password, then click **Apply**.
-    
-    Once successfully connected to the internet, a green dot will appear in the Repeater section on the INTERNET page, and the touchscreen will also display the network status.
+    1. On the touchscreen or web admin panel, go to **Internet** -> **Repeater** and click **Connect**. Mudi 7 will start scanning for available Wi-Fi networks.
+    2. Select the Wi-Fi network you want Mudi 7 to extend. 
+    3. Enter the password and click **Apply**.
+    4. Once successfully connected to the internet, a Wi-Fi icon will appear in the top right corner of the touchscreen. You can also check the connection details on the web admin panel.
 
     Please refer to [Connect to the Internet via an existing Wi-Fi network](../../interface_guide/internet_repeater.md) for detailed instructions.
 
@@ -103,26 +114,58 @@ Configure your Mudi 7 using one of the five supported internet connection method
 
     ![tethering connection](https://static.gl-inet.com/docs/router/en/4/user_guide/gl-e5800/internet/e5800_tethering.jpg){class="glboxshadow"}
 
-    1. Connect your mobile device (e.g., smartphone or USB dongle) to the Mudi 7's USB-C port via a USB cable. 
-    2. On the Mudi 7's touchscreen, select the USB mode as **Host**.
-    3. On your mobile device, go to Settings and enable USB Tethering. 
-    4. On the INTERNET page of the web Admin Panel, click **Connect** in the Tethering section. 
-    
-    Once successfully connected to the internet, a green dot will appear in the Tethering section on the INTERNET page, and the touchscreen will also display the network status.
+    1. Connect your mobile device (e.g., smartphone or USB dongle) to Mudi 7's USB-C port via a USB cable. 
+    2. On your mobile device, go to Settings and enable **USB Tethering**. If you use iPhone, tap **Trust This Device** if prompted. 
+    3. Mudi 7 will then automatically connect to your device. If it does not connect, repeat the above steps, or log in to the web admin panel and check the Tethering connection on the INTERNET page.
+    4. Once successfully connected to the internet, a chain link icon will appear in the top right corner of the touchscreen. You can also check the connection details on the web admin panel.
 
     Please refer to [Connect to the Internet via USB tethering](../../interface_guide/internet_tethering.md) for detailed instructions.
 
 === "USB Ethernet"
 
-    Mudi 7 is equipped with an OTG-enabled* USB-C port. If you want to set up an additional Ethernet WAN access, you can convert the Mudi 7's USB-C port to an Ethernet port for network input via a separately purchased USB-to-Ethernet adapter.
+    ![usb ethernet](https://static.gl-inet.com/docs/router/en/4/user_guide/gl-e5800/internet/e5800_usb_ethernet.png){class="glboxshadow"}
+
+    Mudi 7 is equipped with an **OTG-enabled** USB-C port. If you want to convert the USB-C port to an Ethernet port for additional network input, simply plug a **separately purchased USB-C-to-Ethernet adapter** into the USB-C port, then you will have one more Ethernet port.
 
     <small>*USB OTG (On-The-Go) is a USB standard that enables compatible devices like routers to switch between host and peripheral roles, allowing direct data transmission and power interaction without a separate host device.</small>
 
-    1. Connect an upstream network source (e.g., ISP modem, network switch) to the USB-C port of Mudi 7 via a USB-to-Ethernet adapter. 
-    2. On the Mudi 7's touchscreen, select the USB mode as **Host**.
-    3. Once successfully connected to the internet, a green dot will appear in the USB Ethernet section on the INTERNET page, and the touchscreen will also display the network status.
+    1. Connect an upstream network source (e.g., ISP modem, network switch, or Ethernet jack on the wall) to Mudi 7's USB-C port via a USB C-to-Ethernet adapter. 
+    2. On the touchscreen or web admin panel, go to **Network** -> **Ethernet Ports** -> **USB Ethernet Port**, set the port role to **WAN**, and click **Apply**.
 
-Now you can enjoy surfing the Internet and configuring other settings on the GL.iNet WebGUI.
+        ![touchscreen usb eth wan](https://static.gl-inet.com/docs/router/en/4/user_guide/gl-e5800/internet/ts-usb-eth-wan.png){class="glboxshadow"}
+
+    3. Mudi 7 will then automatically connect to your device. If it does not connect, repeat the above steps, or log in to the web admin panel and check the USB Ethernet connection on the INTERNET page.
+    3. Once successfully connected to the internet, a USB icon and an Ethernet port icon will appear in the top right corner of the touchscreen. You can also check the connection details on the web admin panel.
+
+## Repair & Reset
+
+You can restore network connectivity or reset Mudi 7 to factory defaults by a physical reset button.
+
+**Note**: Before performing a reset, ensure Mudi 7 has fully booted up. Do NOT press the reset button immediately after power-up, as this may trigger U-Boot failsafe mode.
+
+Remove the back cover, and you will find the reset button as shown below. 
+
+![tethering connection](https://static.gl-inet.com/docs/router/en/4/user_guide/gl-e5800/hardware_info/reset-button.png){class="glboxshadow"}
+
+!!! note "Network Repair"
+
+    Press and hold the reset button for **4 seconds**, then release to repair your network. When holding the button, pay attention to the on-screen prompts and operate as instructed.
+
+    This will restart the network interface, while preserving Wi-Fi settings, VPN configurations (disabled), system settings, etc.
+
+    **Note**:
+
+    1. If Wi-Fi has been disabled, a soft reset will restore Wi-Fi to its default enabled state.
+
+    2. A soft reset can also be used to quickly switch the device from non-router mode to router mode.
+
+!!! note "Device Reset"
+
+    Press and hold the reset button for **10 seconds**, then release to perform a hard reset. When holding the button, pay attention to the on-screen prompts and operate as instructed.
+    
+    This will clear all your settings. Please proceed with caution.
+
+---
 
 Below is an overview of the Mudi 7 WebGUI features.
 
@@ -206,9 +249,9 @@ A VPN (virtual private network) creates a secure, encrypted traffic between your
 
 === "Ethernet Port"
 
-    The Ethernet Port page allows you to manage the WAN and LAN ports, switch the MAC mode and MAC address for the WAN interface, and show the negotiated network port rate.
+    The Ethernet Port page allows you to set the Ethernet port role (i.e., using it as WAN/LAN), switch the MAC mode and MAC address for the WAN interface, and display the negotiated port rate.
 
-    Mudi 7 comes with a single Ethernet port, default to WAN. You can switch it to LAN port if required.
+    Mudi 7 comes with a single Ethernet port, default to LAN. You can switch it to WAN port on the touchscreen or the web admin panel if required.
 
     To manage Ethernet ports, refer to [Port Management](../../interface_guide/network_port_management.md).
 

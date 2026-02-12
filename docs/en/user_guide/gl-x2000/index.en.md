@@ -80,7 +80,7 @@ Launch a web browser, enter `192.168.8.1` in the address bar, and you will enter
 
 **Note:** The following instructions apply to users configuring the router via the GL.iNet Web Admin Panel. If you prefer using the GL.iNet app, [download the app](https://www.gl-inet.com/app/){target="_blank"} and follow the on-screen instructions.
 
-Configure your Spitz Plus using one of the four supported internet connection methods: Cellular, Ethernet, Repeater, and Tethering. If you want to use the [Multi-WAN](../../interface_guide/multi-wan.md) feature, please set up more than one internet connection methods.
+Configure your Spitz Plus using one of the supported internet connection methods: Cellular, Ethernet, Repeater, and Tethering. If you want to use the [Multi-WAN](../../interface_guide/multi-wan.md) feature, please set up more than one internet connection.
 
 === "Cellular"
 
@@ -92,9 +92,9 @@ Configure your Spitz Plus using one of the four supported internet connection me
     
     Please refer to [Connect to the Internet via cellular](../../interface_guide/internet_cellular.md/#setup-for-dual-sim-models) for detailed instructions.
 
-    **Note**: The eSIM functionality of GL-X2000 is available on firmware v4.7 and above. Learn how to use the eSIM physical card on GL.iNet router [here](../../tutorials/how_to_use_esim_physical_card_with_glinet_routers.md)
+    **Note**: The eSIM functionality of Spitz Plus is available on firmware v4.7 and above. Learn how to use the eSIM physical card on GL.iNet router [here](../../tutorials/how_to_use_esim_physical_card_with_glinet_routers.md)
 
-    For issues using the cellular, refer to the [Cellular Network Troubleshooting Guide](../../faq/cellular_network_troubleshooting_guide.md). 
+    If you encounter any issues, refer to the [Cellular Network Troubleshooting Guide](../../faq/cellular_network_troubleshooting_guide.md). 
 
 === "Ethernet"
 
@@ -132,8 +132,6 @@ Configure your Spitz Plus using one of the four supported internet connection me
 
 ---
 
-Now you can enjoy surfing the Internet and configuring other settings on the GL.iNet WebGUI.
-    
 Below is an overview of the Spitz Plus WebGUI features.
 
 ## Wireless
