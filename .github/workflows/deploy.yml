@@ -40,10 +40,6 @@ jobs:
         run: |
           cp -r site/* docs-build/router/en/4/
 
-      - name: Deploy Japanese to docs-build
-        run: |
-          cp -r site/ja/* docs-build/router/jp/4/
-
       - name: Commit and Push to docs-build
         working-directory: ./docs-build
         run: |
