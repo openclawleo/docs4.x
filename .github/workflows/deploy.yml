@@ -13,9 +13,6 @@ jobs:
     steps:
       - name: Checkout docs4.x
         uses: actions/checkout@v4
-        with:
-          repository: gl-inet/docs4.x
-          token: ${{ secrets.GH_PAT }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
