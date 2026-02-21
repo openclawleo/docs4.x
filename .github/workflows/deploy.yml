@@ -31,7 +31,7 @@ jobs:
       - name: Checkout docs-build
         uses: actions/checkout@v4
         with:
-          repository: gl-inet/docs-build
+          repository: openclawleo/docs-build
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           path: docs-build
           clean: true
